@@ -1,6 +1,6 @@
 from ev3dev import *
 
-def main()
+def main():
     while(True)
         if(Button.left())
             Leds.set(LEFT, GREEN)
