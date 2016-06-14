@@ -2,14 +2,14 @@ from ev3dev import *
 
 def main():
     while(True):
-        if(Button.left()):
-            Leds.set(LEFT, GREEN)
+        if(ev3.Button.left==True):
+            core.Leds.set(LEFT, GREEN)
         else:
-            LEds.set(LEFT, RED)
-        if(Button.right()):
-            Leds.set(RIGHT, GREEN)
+            core.Leds.set(LEFT, RED)
+        if(ev3.Button.right==True):
+            core.Leds.set(RIGHT, GREEN)
         else:
-            LEds.set(RIGHT, RED)
+            core.Leds.set(RIGHT, RED)
 
 if __name__ == '__main__':
     main()
