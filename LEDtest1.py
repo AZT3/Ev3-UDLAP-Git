@@ -1,11 +1,12 @@
 import ev3dev.ev3 as ev3
+import ev3dev.core as core
 
 def main():
     LEFT=ev3.Leds.LEFT
     RIGHT=ev3.Leds.RIGHT
     GREEN=ev3.Leds.GREEN
     RED=ev3.Leds.RED
-    Screen=ev3.core.Screen
+    Screen=core.Screen
     ev3.Leds.all_off()
     while(True):
         Screen.clear()
