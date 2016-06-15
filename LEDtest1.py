@@ -1,4 +1,4 @@
-import ev3dev
+from ev3dev import *
 
 def main():
     while(True):
