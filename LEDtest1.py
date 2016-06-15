@@ -1,16 +1,17 @@
-import ev3dev.ev3 as ev3
-import ev3dev.core as core
+import ev3dev.ev3.Button as Button
+import ev3dev.ev3.Leds as Leds
 
 def main():
+
     while(True):
-        if(ev3.Button.left==True):
-            ev3.Leds.set(LEFT, GREEN)
+        if(Button.left==True):
+            Leds.set(Leds.LEFT, GREEN)
         else:
-            ev3.Leds.set(LEFT, RED)
-        if(ev3.Button.right==True):
-            ev3.Leds.set(RIGHT, GREEN)
+            Leds.set(Leds.LEFT, RED)
+        if(Button.right==True):
+            Leds.set(Leds.RIGHT, GREEN)
         else:
-            ev3.Leds.set(RIGHT, RED)
+            Leds.set(Leds.RIGHT, RED)
 
 if __name__ == '__main__':
     main()
