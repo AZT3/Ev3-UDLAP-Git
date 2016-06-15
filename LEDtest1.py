@@ -6,13 +6,12 @@ def main():
     RIGHT=ev3.Leds.RIGHT
     GREEN=ev3.Leds.GREEN
     RED=ev3.Leds.RED
-    Screen=core.Screen
     ev3.Leds.all_off()
     while(True):
-        Screen.clear(Screen)
-        Screen.draw.text([5,20,200,100],String(ev3.Button.LEFT))
-        Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
-        Screen.update(Screen)
+        core.Screen.clear()
+        core.Screen.draw.text([5,20,200,100],String(ev3.Button.LEFT))
+        core.Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
+        core.Screen.update()
 
         if(ev3.Button.left==True):
             ev3.Leds.set_color(LEFT, GREEN)
