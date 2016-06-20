@@ -18,14 +18,14 @@ def main():
         left_flag=bool(buttons.value())
         right_flag=bool(buttons.value())
         print(str(left_flag)+" "+str(right_flag))
-        '''if(left_flag==True):
+        if(left_flag==True):
             ev3.Leds.set_color(LEFT, GREEN)
         else:
             ev3.Leds.set_color(LEFT, RED)
         if(right_flag==True):
             ev3.Leds.set_color(RIGHT, GREEN)
         else:
-            ev3.Leds.set_color(RIGHT, RED)'''
+            ev3.Leds.set_color(RIGHT, RED)
 
 if __name__ == '__main__':
     main()
