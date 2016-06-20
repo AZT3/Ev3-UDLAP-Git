@@ -14,7 +14,7 @@ def main():
         core.Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
         core.Screen.update()'''
         time.sleep(1)
-        print(bool(ev3.Button.left)+" "+bool(ev3.Button.right))
+        print(str(bool(ev3.Button.left))+" "+str(bool(ev3.Button.right)))
         if(bool(ev3.Button.left)==True):
             ev3.Leds.set_color(LEFT, GREEN)
         else:
