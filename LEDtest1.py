@@ -1,6 +1,5 @@
 import ev3dev.ev3 as ev3
 import ev3dev.core as core
-from ev3dev.auto import *
 import time as time
 
 def main():
@@ -8,7 +7,7 @@ def main():
     RIGHT      =ev3.Leds.RIGHT
     GREEN      =ev3.Leds.GREEN
     RED        =ev3.Leds.RED
-    buttons    =ev3.Button
+    buttons    =ev3.TouchSensor()
     ev3.Leds.all_off()
     while(True):
         '''core.Screen.clear()
@@ -16,8 +15,8 @@ def main():
         core.Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
         core.Screen.update()'''
         time.sleep(1)
-        left_flag=type(buttons.left)
-        right_flag=type(buttons.right)
+        left_flag=type(buttons.is_pressed())
+        right_flag=type(buttons.is_pressed())
         print(str(left_flag)+" "+str(right_flag))
         '''if(left_flag==True):
             ev3.Leds.set_color(LEFT, GREEN)
