@@ -17,7 +17,7 @@ def main():
         core.Screen.update()'''
         time.sleep(1)
         left_flag=bool(buttons.left)
-        right_flag=(bool)buttons.right
+        right_flag=bool(buttons.right)
         print(str(left_flag)+" "+str(right_flag))
         '''if(left_flag==True):
             ev3.Leds.set_color(LEFT, GREEN)
