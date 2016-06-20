@@ -16,8 +16,8 @@ def main():
         core.Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
         core.Screen.update()'''
         time.sleep(1)
-        left_flag=buttons.left
-        right_flag=buttons.right
+        left_flag=buttons.left()
+        right_flag=buttons.right()
         print(str(left_flag)+" "+str(right_flag))
         '''if(left_flag==True):
             ev3.Leds.set_color(LEFT, GREEN)
