@@ -8,7 +8,7 @@ def main():
     RIGHT      =ev3.Leds.RIGHT
     GREEN      =ev3.Leds.GREEN
     RED        =ev3.Leds.RED
-    buttons    =ev3.Button()
+    buttons    =Button()
     ev3.Leds.all_off()
     while(True):
         '''core.Screen.clear()
