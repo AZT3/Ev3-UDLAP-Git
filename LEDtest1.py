@@ -1,5 +1,6 @@
 import ev3dev.ev3 as ev3
 import ev3dev.core as core
+from ev3dev.auto import *
 import time as time
 
 def main():
@@ -7,7 +8,7 @@ def main():
     RIGHT      =ev3.Leds.RIGHT
     GREEN      =ev3.Leds.GREEN
     RED        =ev3.Leds.RED
-    buttons    =Button()
+    buttons    =ev3.Button()
     ev3.Leds.all_off()
     while(True):
         '''core.Screen.clear()
