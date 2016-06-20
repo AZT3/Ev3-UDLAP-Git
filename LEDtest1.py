@@ -7,7 +7,7 @@ def main():
     RIGHT      =ev3.Leds.RIGHT
     GREEN      =ev3.Leds.GREEN
     RED        =ev3.Leds.RED
-    buttons    =ev3.TouchSensor()
+    buttons    =ev3.Button
     ev3.Leds.all_off()
     while(True):
         '''core.Screen.clear()
@@ -15,8 +15,8 @@ def main():
         core.Screen.draw.text([5,50,200,100],String(ev3.Button.RIGHT))
         core.Screen.update()'''
         time.sleep(1)
-        left_flag=bool(buttons.value())
-        right_flag=bool(buttons.value())
+        left_flag=bool(buttons.left.value())
+        right_flag=bool(buttons.right.value())
         print(str(left_flag)+" "+str(right_flag))
         if(left_flag==True):
             ev3.Leds.set_color(LEFT, GREEN)
